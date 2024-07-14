@@ -1,0 +1,256 @@
+:root {
+    --primary-color: #121212;
+    --secondary-color: #1e1e1e;
+    --accent-color: #ffffff;
+    --text-color: #ffffff;
+    --background-color: #000000;
+    --container-padding: 20px;
+    --button-color: #2b2b2b;
+    --font-family: 'Roboto', sans-serif;
+    --heading-font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around; 
+}
+
+header nav ul li {
+    flex: 1;
+    text-align: center;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-content .hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: var(--secondary-color);
+    background-image: url('Backround 2.png');
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    max-width: 100%; 
+}
+
+.main-content .hero h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: var(--accent-color);
+    font-family: var(--heading-font-family);
+}
+
+.main-content .hero p {
+    font-size: 1.2em;
+}
+
+.main-content .hero .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: var(--heading-font-family);
+    font-weight: bold;
+}
+
+.container {
+    padding: var(--container-padding);
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+    font-family: var(--heading-font-family);
+    color: var(--accent-color);
+}
+
+.bio {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bio-image {
+    flex: 1;
+    min-width: 200px;
+}
+
+.bio-image img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.bio-text {
+    flex: 2;
+    padding: 20px;
+    text-align: justify;
+}
+
+.services, .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service, .project {
+    background-color: var(--secondary-color);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 30%;
+    max-width: 30%;
+    box-sizing: border-box;
+    text-align: left;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.service:hover, .project:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.service h3, .project h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+    font-family: var(--heading-font-family);
+}
+
+.service p, .project p {
+    text-align: justify;
+}
+
+.project-info img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-info h3 {
+    margin-top: 10px;
+}
+
+.project-info p {
+    margin: 10px 0;
+}
+
+.project .btn, .service .btn {
+    align-items: left;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--heading-font-family);
+    font-weight: bold;
+}
+
+.project-info p {
+    margin-bottom: 20px; 
+}
+
+form .form-group {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--accent-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin-bottom: 10px;
+}
+
+form .btn {
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    font-family: var(--heading-font-family);
+    font-weight: bold;
+    margin-top: 10px; 
+}
+
+.social-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+    font-family: var(--heading-font-family);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    font-family: var(--heading-font-family);
+
+}
+
+@media (max-width: 768px) {
+    .service, .project {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .bio {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .main-content .hero h1 {
+        font-size: 2em;
+    }
+}
